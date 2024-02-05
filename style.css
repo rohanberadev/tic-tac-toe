@@ -1,0 +1,113 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 1em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1.5rem;
+}
+
+#h1 {
+    margin-bottom: 12px;
+}
+
+.play-area {
+    width: 525px;
+    height: 525px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.items {
+    width: 175px;
+    height: 175px;
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #333;
+
+    font-size: 6rem;
+    font-weight: 500;
+}
+
+.items:hover, .items:focus {
+    cursor: pointer;
+    background-color: rgba(180, 169, 169, 0.211);
+}
+
+#item0:hover, #item0:focus {
+    border-top-left-radius: 10px;
+}
+
+#item2:hover, #item2:focus {
+    border-top-right-radius: 10px;
+}
+
+#item6:hover, #item6:focus {
+    border-bottom-left-radius: 10px;
+}
+
+#item8:hover, #item8:focus {
+    border-bottom-right-radius: 10px;
+}
+
+#item0, #item1, #item2 {
+    border-top: none;
+}
+
+#item0, #item3, #item6 {
+    border-left: none;
+}
+
+#item2, #item5, #item8 {
+    border-right: none;
+} 
+
+button:hover, button:focus {
+    cursor: pointer;
+}
+
+#item6, #item7, #item8 {
+    border-bottom: none;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.container-game-over {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .play-area {
+        width: 354px;
+        height: 423px;
+    }
+
+    .items {
+        width: 118px;
+        height: 141px;
+    }
+}
